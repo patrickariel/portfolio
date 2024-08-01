@@ -11,8 +11,7 @@ export const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      (className =
-        "flex w-full min-w-[300px] max-w-4xl flex-col gap-14 rounded-xl bg-card pt-10 text-card-foreground shadow-sm sm:border sm:p-16"),
+      "flex w-full min-w-[300px] max-w-4xl flex-col gap-14 rounded-xl bg-card pt-10 text-card-foreground shadow-sm sm:border sm:p-16",
       className,
     )}
     {...props}
