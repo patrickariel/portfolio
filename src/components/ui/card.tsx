@@ -55,7 +55,7 @@ export const CardBio = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <article
     ref={ref}
-    className={cn("flex flex-col items-center sm:items-start", className)}
+    className={cn("flex flex-col items-center gap-2 sm:items-start", className)}
     {...props}
   />
 ));
