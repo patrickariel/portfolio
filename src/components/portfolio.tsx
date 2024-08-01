@@ -146,14 +146,28 @@ export function Portfolio() {
 
       <CardContent>
         <CardTopic icon={FolderGit2} label="Projects" />
-        <p className="text-muted-foreground">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus
-          luctus erat non tincidunt. Etiam maximus venenatis pellentesque. In
-          hac habitasse platea dictumst. Duis eget enim quis sem venenatis
-          ullamcorper. Nam facilisis vel tortor in convallis. Integer id ante a
-          lorem cursus dapibus eu vitae massa. Vivamus eu nibh sit amet nibh
-          convallis cursus.
-        </p>
+        <Pane>
+          <PaneTab>
+            <a
+              href="https://github.com/semicolon-org/semicolon"
+              className="flex w-fit flex-row items-center gap-2 border-b border-transparent hover:border-white"
+            >
+              <ExternalLink size={19} /> <span>Semicolon</span>
+            </a>
+          </PaneTab>
+          <PaneContent>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              luctus luctus erat non tincidunt. Etiam maximus venenatis
+              pellentesque. In hac habitasse platea dictumst.
+            </p>
+            <BadgeContainer>
+              <NextJsBadge />
+              <TailwindBadge />
+              <PrismaBadge />
+            </BadgeContainer>
+          </PaneContent>
+        </Pane>
       </CardContent>
     </Card>
   );
