@@ -1,6 +1,21 @@
 import avatar from "/avatar.png";
+import {
+  CssBadge,
+  HtmlBadge,
+  JavaScriptBadge,
+  LinuxBadge,
+  NextJsBadge,
+  NixOsBadge,
+  PostgreSqlBadge,
+  PrismaBadge,
+  ReactBadge,
+  RustBadge,
+  TailwindBadge,
+  TrpcBadge,
+  TypeScriptBadge,
+} from "@/components/badges";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
+import { BadgeContainer } from "@/components/ui/badge";
 import {
   Card,
   CardContact,
@@ -13,28 +28,20 @@ import {
   CardProfile,
   CardContactEntry,
 } from "@/components/ui/card";
+import { Pane, PaneContent, PaneTab } from "@/components/ui/pane";
 import {
   Blocks,
   CircleUser,
   CodeXml,
   Droplets,
+  ExternalLink,
   FolderGit2,
   GraduationCap,
   Mail,
   Phone,
   User,
 } from "lucide-react";
-import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
-import { FaHtml5, FaCss3Alt, FaRust } from "react-icons/fa";
-import { FcLinux } from "react-icons/fc";
 import { PiGithubLogoBold } from "react-icons/pi";
-import {
-  RiNextjsFill,
-  RiReactjsLine,
-  RiJavascriptFill,
-  RiTailwindCssFill,
-} from "react-icons/ri";
-import { SiTrpc, SiNixos, SiPrisma } from "react-icons/si";
 
 export function Portfolio() {
   return (
@@ -114,65 +121,26 @@ export function Portfolio() {
       <article className="flex flex-col gap-14 sm:flex-row lg:gap-5">
         <CardContent className="sm:w-1/2">
           <CardTopic icon={CodeXml} label="Skills" />
-          <p className="flex flex-wrap gap-3 text-muted-foreground">
-            <Badge variant="secondary">
-              <FaHtml5 className="fill-orange-600" />
-              Html
-            </Badge>
-            <Badge variant="secondary">
-              <FaCss3Alt className="fill-blue-400" />
-              Css
-            </Badge>
-            <Badge variant="secondary">
-              <RiJavascriptFill className="fill-yellow-400" />
-              JavaScript
-            </Badge>
-            <Badge variant="secondary">
-              <BiLogoTypescript className="fill-sky-400" />
-              TypeScript
-            </Badge>
-            <Badge variant="secondary">
-              <RiReactjsLine className="fill-sky-300" />
-              React
-            </Badge>
-            <Badge variant="secondary">
-              <RiNextjsFill />
-              Next.js
-            </Badge>
-            <Badge variant="secondary">
-              <RiTailwindCssFill className="fill-sky-400" />
-              Tailwind
-            </Badge>
-            <Badge variant="secondary">
-              <BiLogoPostgresql className="fill-cyan-600" />
-              PostgreSQL
-            </Badge>
-            <Badge variant="secondary">
-              <SiPrisma />
-              Prisma
-            </Badge>
-            <Badge variant="secondary">
-              <SiTrpc className="fill-sky-500" />
-              tRPC
-            </Badge>
-          </p>
+          <BadgeContainer>
+            <HtmlBadge />
+            <CssBadge />
+            <JavaScriptBadge />
+            <TypeScriptBadge />
+            <ReactBadge />
+            <NextJsBadge />
+            <TailwindBadge />
+            <PostgreSqlBadge />
+            <PrismaBadge />
+            <TrpcBadge />
+          </BadgeContainer>
         </CardContent>
         <CardContent className="sm:w-1/2">
           <CardTopic icon={Blocks} label="Hobbies" />
-          <p className="flex flex-wrap gap-3 text-muted-foreground">
-            <Badge variant="secondary">
-              <FcLinux />
-              Linux
-            </Badge>
-            <Badge variant="secondary">
-              <SiNixos className="fill-sky-300" />
-              NixOS
-            </Badge>
-            <Badge variant="secondary">
-              <FaRust />
-              Rust
-            </Badge>
-          </p>
+          <BadgeContainer>
+            <LinuxBadge />
+            <NixOsBadge />
+            <RustBadge />
+          </BadgeContainer>
         </CardContent>
       </article>
 

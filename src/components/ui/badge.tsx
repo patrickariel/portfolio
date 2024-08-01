@@ -2,7 +2,8 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
-const badgeVariants = cva(
+// eslint-disable-next-line react-refresh/only-export-components
+export const badgeVariants = cva(
   "inline-flex items-center rounded-lg border px-2.5 py-0.5 text-base font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 gap-1.5",
   {
     variants: {
@@ -26,10 +27,15 @@ export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
 
-function Badge({ className, variant, ...props }: BadgeProps) {
+export function Badge({ className, variant, ...props }: BadgeProps) {
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />
   );
 }
 
-export { Badge, badgeVariants };
+export function BadgeContainer({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("flex flex-wrap gap-3", className)} {...props} />;
+}
