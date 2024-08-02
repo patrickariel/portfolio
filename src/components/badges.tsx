@@ -8,7 +8,8 @@ import {
   RiJavascriptFill,
   RiTailwindCssFill,
 } from "react-icons/ri";
-import { SiTrpc, SiNixos, SiPrisma } from "react-icons/si";
+import { SiTrpc, SiNixos, SiPrisma, SiExpress } from "react-icons/si";
+import { TbBrandVite } from "react-icons/tb";
 
 export function HtmlBadge() {
   return (
@@ -123,6 +124,24 @@ export function RustBadge() {
     <Badge variant="secondary">
       <FaRust />
       Rust
+    </Badge>
+  );
+}
+
+export function ViteBadge() {
+  return (
+    <Badge variant="secondary">
+      <TbBrandVite className="stroke-yellow-500" />
+      Vite
+    </Badge>
+  );
+}
+
+export function ExpressBadge() {
+  return (
+    <Badge variant="secondary">
+      <SiExpress />
+      Express
     </Badge>
   );
 }
