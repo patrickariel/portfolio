@@ -7,10 +7,10 @@ const config = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
+    "./index.html",
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
-  safelist: ["dark"],
   theme: {
     fontFamily: {
       sans: ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
