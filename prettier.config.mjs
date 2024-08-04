@@ -4,6 +4,7 @@ const config = {
     "@trivago/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
   ],
+  importOrderSortSpecifiers: true,
 };
 
 export default config;

@@ -1,12 +1,10 @@
-import { Portfolio } from "@/components/portfolio";
-import "@/index.css";
-import "@fontsource-variable/inter";
+import { App } from "@/app";
 import "@fontsource-variable/raleway";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-ReactDOM.createRoot(document.body).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Portfolio />
+    <App />
   </React.StrictMode>,
 );
