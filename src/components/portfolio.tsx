@@ -64,7 +64,7 @@ export function Portfolio() {
           >
             <Avatar className="relative size-[150px] sm:size-[110px]">
               <AvatarImage src={avatar} />
-              <AvatarFallback>
+              <AvatarFallback delayMs={800}>
                 <User size={64} />
               </AvatarFallback>
             </Avatar>
