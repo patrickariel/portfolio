@@ -53,7 +53,7 @@ const BLUR_FADE_DELAY = 0.05;
 
 export function Portfolio() {
   return (
-    <main className="flex w-full min-w-[300px] max-w-3xl flex-col gap-10 rounded-xl bg-card pt-4 text-card-foreground shadow-sm sm:p-14 sm:pt-11">
+    <main className="flex w-full min-w-[300px] max-w-3xl flex-col gap-10 rounded-xl pt-4 text-card-foreground shadow-sm sm:p-14 sm:pt-11">
       <BlurFade delay={BLUR_FADE_DELAY}>
         <header className="flex flex-col items-center gap-6 sm:flex-row sm:gap-9">
           <ShineBorder
@@ -304,7 +304,7 @@ export function Portfolio() {
                 </div>
               </CardFooter>
             </Card>
-            <article className="flex h-[300px] items-center justify-center border-none bg-none p-5 backdrop-blur-none sm:h-[500px]">
+            <article className="flex h-[300px] items-center justify-center border-none bg-none p-5 sm:h-[500px]">
               <TypingAnimation
                 className="text-4xl font-semibold leading-none tracking-tight"
                 duration={100}
