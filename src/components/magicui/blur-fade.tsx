@@ -3,9 +3,9 @@ import {
   Variants,
   type inView,
   motion,
+  useAnimate,
   useInView,
 } from "framer-motion";
-import { useRef } from "react";
 
 interface BlurFadeProps {
   children: React.ReactNode;
@@ -33,8 +33,8 @@ export function BlurFade({
   inViewMargin = "-50px",
   blur = "6px",
 }: BlurFadeProps) {
-  const ref = useRef(null);
-  const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
+  const [scope, animate] = useAnimate();
+  const inViewResult = useInView(scope, { once: true, margin: inViewMargin });
   const isInView = !inView || inViewResult;
   const defaultVariants: Variants = {
     hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },
@@ -44,7 +44,7 @@ export function BlurFade({
   return (
     <AnimatePresence>
       <motion.div
-        ref={ref}
+        ref={scope}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         exit="hidden"
@@ -54,6 +54,9 @@ export function BlurFade({
           duration,
           ease: "easeOut",
         }}
+        onAnimationComplete={() =>
+          animate(scope.current, { filter: "" }, { duration: 0 })
+        }
         className={className}
       >
         {children}
