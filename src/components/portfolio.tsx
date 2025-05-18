@@ -40,12 +40,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Contact, ContactEntry } from "@/components/ui/contact";
-import {
-  Timeline,
-  TimelineContent,
-  TimelineEntry,
-  TimelinePeriod,
-} from "@/components/ui/timeline";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Globe, Mail, Phone, User } from "lucide-react";
 
@@ -98,46 +92,6 @@ export function Portfolio() {
             Rust, or fine-tuning my OS setup. Let's build something amazing
             together!
           </p>
-        </article>
-      </BlurFade>
-
-      <BlurFade delay={BLUR_FADE_DELAY * 5}>
-        <article className="relative flex flex-col gap-3">
-          <h3 className="z-10 text-xl font-bold">Education</h3>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white shadow-2xl dark:from-background" />
-          <Timeline>
-            <TimelineEntry>
-              <TimelineContent>
-                <h3>Cita Hati School</h3>
-                <p className="text-sm text-muted-foreground">Middle school</p>
-              </TimelineContent>
-              <TimelinePeriod>2010 - 2013</TimelinePeriod>
-            </TimelineEntry>
-            <TimelineEntry>
-              <TimelineContent>
-                <h3>Masa Depan Cerah</h3>
-                <p className="text-sm text-muted-foreground">High school</p>
-              </TimelineContent>
-              <TimelinePeriod>2013 - 2016</TimelinePeriod>
-            </TimelineEntry>
-            <TimelineEntry>
-              <TimelineContent>
-                <h3>Imanuel</h3>
-                <p className="text-sm text-muted-foreground">High school</p>
-              </TimelineContent>
-              <TimelinePeriod>2016 - 2017</TimelinePeriod>
-            </TimelineEntry>
-            <TimelineEntry connect={false}>
-              <TimelineContent>
-                <h3>Binar Academy</h3>
-                <p className="text-sm text-muted-foreground">
-                  Full-stack web bootcamp. Received "The Most Progressive
-                  Student" certificate.
-                </p>
-              </TimelineContent>
-              <TimelinePeriod>Feb 2024 - Aug 2024</TimelinePeriod>
-            </TimelineEntry>
-          </Timeline>
         </article>
       </BlurFade>
 
